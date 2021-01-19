@@ -12,8 +12,8 @@ import { QuestionType } from './question/question';
 
 const questionnaires: Questionnaire[] = [
   {
-    id: '52474217-e3be-42d7-a2d4-32a49e3f9a85',
-    name: 'Sample Questionnaire',
+    id: '1',
+    name: 'Sample Questionnaire One',
     sections: [
       {
         name: 'Food & Drink',
@@ -29,7 +29,32 @@ const questionnaires: Questionnaire[] = [
               'Mississippi',
               'Louisiana'
             ],
-            answer: ['North Carolina']
+            answers: ['North Carolina']
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: '2',
+    name: 'Sample Questionnaire Two',
+    sections: [
+      {
+        name: 'Art',
+        questions: [
+          {
+            type: QuestionType.MULTIPLE_CHOICE_MULTIPLE_RESPONSE,
+            question: 'What are the three primary colors?',
+            options: [
+              'Red',
+              'Orange',
+              'Yellow',
+              'Green',
+              'Blue',
+              'Indigo',
+              'Violet'
+            ],
+            answers: ['Red', 'Yellow', 'Blue']
           }
         ]
       }
@@ -51,16 +76,26 @@ server.use((request, response, next) => {
     const origin = request.headers.origin;
     const authorizedOrigin = authorizedOrigins.find((authorizedOrigin) => {
       return authorizedOrigin === origin;
-    })
+    });
     if (authorizedOrigin) {
       response.setHeader('Access-Control-Allow-Origin', authorizedOrigin);
-      response.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,HEAD,OPTIONS');
-      response.setHeader('Access-Control-Allow-Headers', 'authorization,content-type');
+      response.setHeader(
+        'Access-Control-Allow-Methods',
+        'GET,PUT,POST,DELETE,HEAD,OPTIONS'
+      );
+      response.setHeader(
+        'Access-Control-Allow-Headers',
+        'authorization,content-type'
+      );
     }
-    console.log(`${authorizedOrigin ? 'Authorized' : 'Unauthorized'} request form origin ${origin} to resource ${request.url}`)
+    console.log(
+      `${
+        authorizedOrigin ? 'Authorized' : 'Unauthorized'
+      } request form origin ${origin} to resource ${request.url}`
+    );
   }
   next();
-})
+});
 
 /// Endpoints ///
 server.get('/ping', (_request, response) => {

@@ -10,5 +10,5 @@ export interface Question {
   type: QuestionType;
   question: string;
   options: string[];
-  answer: string[];
+  answers: string[];
 }
