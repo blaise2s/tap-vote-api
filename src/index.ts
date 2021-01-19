@@ -29,7 +29,7 @@ const questionnaires: Questionnaire[] = [
               'Mississippi',
               'Louisiana'
             ],
-            answer: 'North Carolina'
+            answer: ['North Carolina']
           }
         ]
       }
