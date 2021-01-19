@@ -4,6 +4,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/vim,osx,node,macos,emacs,vscode,dotenv,windows,sublimetext,visualstudio,jetbrains+all,visualstudiocode,git
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,osx,node,macos,emacs,vscode,dotenv,windows,sublimetext,visualstudio,jetbrains+all,visualstudiocode,git
 
+### build ###
+build/
+
 ### dotenv ###
 .env
 
