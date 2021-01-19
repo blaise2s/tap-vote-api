@@ -1,0 +1,8 @@
+# .travis.yml
+
+language: node_js
+node_js:
+  - node
+script:
+  - npm run all-tests
+  - npm run build
