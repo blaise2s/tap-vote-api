@@ -30,6 +30,50 @@ const questionnaires: Questionnaire[] = [
               'Louisiana'
             ],
             answers: ['North Carolina']
+          },
+          {
+            type: QuestionType.MULTIPLE_CHOICE_MULTIPLE_RESPONSE,
+            question: 'Which three countries produces the most wine?',
+            options: [
+              'Spain',
+              'United States',
+              'Australia',
+              'Italy',
+              'Argentina',
+              'France',
+              'Chile'
+            ],
+            answers: ['Italy', 'France', 'Spain']
+          }
+        ]
+      },
+      {
+        name: 'Current Events',
+        questions: [
+          {
+            type: QuestionType.MULTIPLE_CHOICE_SINGLE_RESPONSE,
+            question: 'Joe Biden is the _____ President of the United States.',
+            options: [
+              '44th',
+              '45th',
+              '46th',
+              '47th',
+              '48th'
+            ],
+            answers: ['46th']
+          },
+          {
+            type: QuestionType.MULTIPLE_CHOICE_SINGLE_RESPONSE,
+            question: 'What company recently acquired Slack?',
+            options: [
+              'Microsoft',
+              'Amazon',
+              'Facebook',
+              'Salesforce',
+              'Google',
+              'Twitter'
+            ],
+            answers: ['Salesforce']
           }
         ]
       }
@@ -55,6 +99,18 @@ const questionnaires: Questionnaire[] = [
               'Violet'
             ],
             answers: ['Red', 'Yellow', 'Blue']
+          },
+          {
+            type: QuestionType.MULTIPLE_CHOICE_SINGLE_RESPONSE,
+            question: 'Who painted the Mona Lisa?',
+            options: [
+              'Vincent van Gogh',
+              'Leonardo da Vinci',
+              'Pablo Picasso',
+              'Salvador Dalí',
+              'Claude Monet'
+            ],
+            answers: ['Leonardo da Vinci']
           }
         ]
       }
